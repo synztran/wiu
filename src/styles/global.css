@@ -11,3 +11,16 @@ body {
 	text-rendering: optimizeLegibility;
 	overflow-wrap: break-word;	
 }
+
+
+/* Signature logo */
+#signature{
+    stroke-dasharray:2625 ;
+    stroke-dashoffset: 2625;
+    animation: sign 4s ease-in-out infinite;
+  }
+@keyframes sign{
+to{
+	stroke-dashoffset: 0;
+}
+}
