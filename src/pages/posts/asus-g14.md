@@ -6,7 +6,7 @@ slug: zephyrus-g14
 pubDate: "Jul 08 2022"
 pub: true
 tags: ['Computing']
-heroImage: ./../public/posts_asus_g14.jpg
+heroImage: ./../public/asus-g14.jpg
 ---
 
 ![g14-thumbnail](https://drive.google.com/uc?export=view&id=1_icyVZZdeet-XX9dj256_6WLMdbqyXUV)
