@@ -8,9 +8,10 @@ import CreatedWiteSection from '../components/CreatedWiteSection.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Masthead from '../components/Masthead.astro';
-import { HOMEPAGE_URL,SITE_DESCRIPTION,SITE_TITLE } from '../config';
+import { HOMEPAGE_URL,IMAGE_NOT_FOUND,SITE_DESCRIPTION,SITE_TITLE } from '../config';
 
 const posts = (await Astro.glob('./posts/*.md')).sort((a: any,b: any) => new Date(b.frontmatter.createdAt).valueOf() - new Date(a.frontmatter.createdAt).valueOf() )
+
 ---
 
 <!DOCTYPE html>
@@ -35,11 +36,11 @@ const posts = (await Astro.glob('./posts/*.md')).sort((a: any,b: any) => new Dat
 							posts.map((post)=> post.frontmatter.pub === true &&  (
 								<li class="text-center mb-4">
 									<Image 
-									  class="border border-slate-300 dark:border-zinc-700 rounded-xl"
-									  src={post.frontmatter.heroImage}
-									  // width={720*2}
-									  // aspectRatio={2.0}
-									  alt="Thumbnail"
+										class="border border-slate-300 dark:border-zinc-700 rounded-xl"
+										src={post.frontmatter.heroImage ?? IMAGE_NOT_FOUND}
+										width={720*2}
+										aspectRatio={2.0}
+										alt="Thumbnail"
 									/>
 									<a href={post.url}>
 										<div class="mt-3 text-xl">

@@ -1,9 +1,11 @@
 ---
+import { Image } from '@astrojs/image/components';
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import Body from '../components/Body.astro';
 import Content from '../components/Content.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { IMAGE_NOT_FOUND } from '../config';
 
 export interface Props {
 	content: {
@@ -33,7 +35,7 @@ const {
 			<Content className="mb-8">
 				{pub && 
 					<article>
-						{heroImage && <img class="border border-slate-300 dark:border-zinc-700 rounded-xl" width={720} height={360} src={heroImage} alt="" />}
+						{heroImage && <Image class="border border-slate-300 dark:border-zinc-700 rounded-xl" width={720} height={360} src={heroImage ? heroImage : IMAGE_NOT_FOUND} alt="" />}
 						<h1 class="text-3xl my-1 font-mplus">{title}</h1>
 						<div class="">{description}</div>
 						<hr class="border-top border-zinc-400 my-4"/> 
