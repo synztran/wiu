@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { IoSunny, IoMoon } from 'react-icons/io5/index.js'
+import { IoMoon, IoSunny } from 'react-icons/io5/index.js'
 
 enum THEMES {
     LIGHT = 'light',
     DARK = 'dark'
 }
-interface ThemeOpt{
+interface ThemeOpt {
     name: string,
     icon: JSX.Element
 }
@@ -14,7 +14,7 @@ interface ThemeOpt{
 const ThemeList: Record<THEMES, ThemeOpt> = {
     [THEMES.DARK]: {
         name: 'dark',
-        icon: <IoMoon/>
+        icon: <IoMoon />
     },
     [THEMES.LIGHT]: {
         name: 'light',
@@ -23,39 +23,39 @@ const ThemeList: Record<THEMES, ThemeOpt> = {
 }
 const themes = [THEMES.LIGHT, THEMES.DARK]
 
-export default function ThemeBtn(){
+export default function ThemeBtn() {
     const [isMounted, setMounted] = useState<boolean>(false)
-    const [theme, setTheme] = useState(()=>{
-        if(import.meta.env.SSR){
+    const [theme, setTheme] = useState(() => {
+        if (import.meta.env.SSR) {
             return undefined
         }
-        if(typeof localStorage !== 'undefined' && localStorage.getItem('theme')){
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
             return localStorage.getItem('theme')
         }
-        if(window.matchMedia('(prefers-color-schema: dark)').matches){
+        if (window.matchMedia('(prefers-color-schema: dark)').matches) {
             return 'dark'
         }
         return 'light'
-    }) 
-    
+    })
+
     const toggleTheme = () => {
         const t = theme === 'light' ? 'dark' : 'light'
         localStorage.setItem('theme', t)
         setTheme(t)
     }
 
-    useEffect(()=>{
-        const root = document.documentElement; 
-        if(theme === 'light'){
+    useEffect(() => {
+        const root = document.documentElement;
+        if (theme === 'light') {
             root.classList.remove('dark')
-        }else{
+        } else {
             root.classList.add('dark')
         }
-    },[theme])
+    }, [theme])
 
-    useEffect(()=>{
+    useEffect(() => {
         setMounted(true);
-    },[])
+    }, [])
 
     return isMounted ? (
         <div className='inline-flex items-center p-[1px] rounded-3xl bg-orange-300 dark:bg-zinc-600'>{
