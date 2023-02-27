@@ -22,6 +22,10 @@ export default defineConfig({
           h3: 'text-xl font-bold font-mplus',
           h4: 'text-lg font-bold font-mplus',
           h5: 'font-bold font-mplus',
+          h6: 'font-bild font-mpplus',
+          img: 'border border-slate-300 dark:border-zinc-700 rounded-xl mb-6',
+          p: 'mb-6',
+          a: 'underline underline-offset-2 hover:text-orange-500 decorate-orange-500'
         }
       ]
     ]

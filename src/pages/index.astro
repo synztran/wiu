@@ -1,15 +1,16 @@
 ---
+import { Image } from '@astrojs/image/components';
+import { IoArrowForward } from 'react-icons/io5';
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION, HOMEPAGE_URL } from '../config';
 import Body from '../components/Body.astro';
 import Content from '../components/Content.astro';
-import { IoArrowForward } from 'react-icons/io5';
+import CreatedWiteSection from '../components/CreatedWiteSection.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 import Masthead from '../components/Masthead.astro';
-import {Image} from '@astrojs/image/components'
+import { HOMEPAGE_URL,SITE_DESCRIPTION,SITE_TITLE } from '../config';
 
-const posts = (await Astro.glob('./posts/*.md')).sort((a: any,b: any) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf() )
+const posts = (await Astro.glob('./posts/*.md')).sort((a: any,b: any) => new Date(b.frontmatter.createdAt).valueOf() - new Date(a.frontmatter.createdAt).valueOf() )
 ---
 
 <!DOCTYPE html>
@@ -31,7 +32,7 @@ const posts = (await Astro.glob('./posts/*.md')).sort((a: any,b: any) => new Dat
 				<section>
 					<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
 						{
-							posts.map((post)=>(
+							posts.map((post)=> post.frontmatter.pub === true &&  (
 								<li class="text-center mb-4">
 									<Image 
 									  class="border border-slate-300 dark:border-zinc-700 rounded-xl"
@@ -51,6 +52,7 @@ const posts = (await Astro.glob('./posts/*.md')).sort((a: any,b: any) => new Dat
 						}
 					</ul>
 				</section>
+				<CreatedWiteSection />
 			</Content>
 		</main>
 		<Footer />
