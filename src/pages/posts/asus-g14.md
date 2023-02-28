@@ -6,9 +6,8 @@ slug: zephyrus-g14
 pubDate: "Jul 08 2022"
 pub: true
 tags: ['Computing']
-heroImage: ./../public/posts_asus_g14.jpg
+heroImage: https://drive.google.com/uc?export=view&id=1I1F_ztYSdcEwht_XnWZB34RCp9oK9MkX
 ---
-
 ![g14-thumbnail](https://drive.google.com/uc?export=view&id=1_icyVZZdeet-XX9dj256_6WLMdbqyXUV)
 
 Asus Zephyrus G14 is my sub-machine. In right way to telling that is my old laptop few month ago. Ya, I just moving to use Macbook few month ago after living with Zephyrus G14.
