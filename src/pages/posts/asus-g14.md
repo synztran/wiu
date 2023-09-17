@@ -4,7 +4,7 @@ title: Asus Zephyrus G14
 description: laptop computer
 slug: zephyrus-g14
 pubDate: "Jul 08 2022"
-pub: true
+pub: false
 tags: ['Computing']
 heroImage: https://drive.google.com/uc?export=view&id=1I1F_ztYSdcEwht_XnWZB34RCp9oK9MkX
 ---

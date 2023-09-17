@@ -1,12 +1,13 @@
 ---
 layout: ../../layouts/BlogPost.astro
-title: Macbook Pro (M1 Pro)
+title: Macbook Pro 14" (M1 Pro)
 description: laptop computer
 slug: macbook-pro
 pubDate: "Jul 08 2022"
 pub: true
-tags: ['Computing']
-heroImage: https://drive.google.com/uc?export=view&id=1IahbyNp0YxOY6MTXF13LsZ5GJRBz6X1k
+tags: ['Device']
+# heroImage: https://drive.google.com/uc?export=view&id=1u2KFoIwIfaJuYW70WtgzjWg9ECtWrnLt
+heroImage: ./../public/macbook-thumbnail.jpg
 ---
 
 MacBook Pro (14-inch, 2021) is my main computer for app dev, designing, video editing, and everything else.
