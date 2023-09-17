@@ -6,8 +6,7 @@ slug: macbook-pro
 pubDate: "Jul 08 2022"
 pub: true
 tags: ['Device']
-# heroImage: https://drive.google.com/uc?export=view&id=1u2KFoIwIfaJuYW70WtgzjWg9ECtWrnLt
-heroImage: ./../public/macbook-thumbnail.jpg
+heroImage: https://drive.google.com/uc?export=view&id=1lLjkSTGuC7Zr1Mt5YtXuxRoXzyCBk7JQ
 ---
 
 MacBook Pro (14-inch, 2021) is my main computer for app dev, designing, video editing, and everything else.
